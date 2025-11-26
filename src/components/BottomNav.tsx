@@ -1,4 +1,4 @@
-import { NavLink } from "@/components/NavLink";
+import { NavLink } from "react-router-dom";
 import { Home, Calendar, Newspaper, Compass, User } from "lucide-react";
 
 const BottomNav = () => {
@@ -17,13 +17,16 @@ const BottomNav = () => {
           <NavLink
             key={to}
             to={to}
-            className="flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-lg transition-all"
-            activeClassName="text-primary"
+            className={({ isActive }) =>
+              `flex flex-col items-center justify-center gap-1 px-3 py-2 rounded-lg transition-all ${
+                isActive ? "text-primary" : "text-muted-foreground"
+              }`
+            }
           >
             {({ isActive }) => (
               <>
-                <Icon className={`w-5 h-5 ${isActive ? "text-primary" : "text-muted-foreground"}`} />
-                <span className={`text-xs ${isActive ? "text-primary font-semibold" : "text-muted-foreground"}`}>
+                <Icon className="w-5 h-5" />
+                <span className={`text-xs ${isActive ? "font-semibold" : ""}`}>
                   {label}
                 </span>
               </>
