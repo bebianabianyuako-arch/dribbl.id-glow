@@ -7,7 +7,10 @@ import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import Matches from "./pages/Matches";
 import News from "./pages/News";
-import Explore from "./pages/Explore";
+import Events from "./pages/Events";
+import Others from "./pages/Others";
+import Players from "./pages/Players";
+import Teams from "./pages/Teams";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
 
@@ -24,7 +27,10 @@ const App = () => (
             <Route path="/" element={<Home />} />
             <Route path="/matches" element={<Matches />} />
             <Route path="/news" element={<News />} />
-            <Route path="/explore" element={<Explore />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/others" element={<Others />} />
+            <Route path="/players" element={<Players />} />
+            <Route path="/teams" element={<Teams />} />
             <Route path="/profile" element={<Profile />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

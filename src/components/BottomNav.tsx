@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Home, Calendar, Newspaper, Compass, User } from "lucide-react";
+import { Home, Calendar, Newspaper, PartyPopper, MoreHorizontal } from "lucide-react";
 
 const BottomNav = () => {
   const location = useLocation();
@@ -8,8 +8,8 @@ const BottomNav = () => {
     { to: "/", icon: Home, label: "Home" },
     { to: "/matches", icon: Calendar, label: "Matches" },
     { to: "/news", icon: Newspaper, label: "News" },
-    { to: "/explore", icon: Compass, label: "Explore" },
-    { to: "/profile", icon: User, label: "Profile" },
+    { to: "/events", icon: PartyPopper, label: "Events" },
+    { to: "/others", icon: MoreHorizontal, label: "Others" },
   ];
 
   return (
